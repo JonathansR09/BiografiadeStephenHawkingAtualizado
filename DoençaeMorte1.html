@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Biografia_de_stephen_hawking</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="index.html">Biografia</a>
+  <a href="importacia1.html">Importancia</a>
+  <a href="DoençaeMorte1.html">Doença e morte</a>
+</div>
+
+<div class="content2">
+  <h2>Doença E Morte</h2>
+  <p>
+    "Também conhecida como doença de Lou Gehrig, a Esclerose Lateral Amiotrófica (ELA) é uma doença neurológica e degenerativa que atinge os neurônios motores, promovendo a atrofia dos músculos. Apesar dos efeitos degenerativos, a doença não afeta a capacidade cognitiva dos portadores. ELA é uma doença sem cura, e o tratamento visa a melhorar a qualidade de vida daqueles que a possuem.
+                Quando descobriu ser portador dessa doença, aos 21 anos, os médicos de Stephen Hawking deram-lhe uma expectativa de vida de dois anos. No entanto, sua doença progrediu lentamente. Hawking viveu até a idade de 76 anos, quando faleceu em 14 de março de 2018."
+        
+  </p>
+<div>
+  <img class="img3" src="img/stephen-hawking-se-locomovia-se-comunicava-por-meio-uma-cadeira-especial.png" alt="">
+
+</div>
+<div id="result">
+
+    <script>
+        function calcularTempoDesdeMorte(dataMorte) {
+            var agora = new Date();
+            var dataMorteObj = new Date(dataMorte);
+
+            // Calcula a diferença em milissegundos
+            var diferenca = agora - dataMorteObj;
+
+            // Converte a diferença para dias, anos, horas e minutos
+            var segundos = Math.floor(diferenca / 1000);
+            var minutos = Math.floor(segundos / 60);
+            var horas = Math.floor(minutos / 60);
+            var dias = Math.floor(horas / 24);
+            var anos = Math.floor(dias / 365);
+
+            return {
+                anos: anos,
+                dias: dias % 365,
+                horas: horas % 24,
+                minutos: minutos % 60,
+                segundos: segundos % 60
+            };
+        }
+
+        // Data da morte (substitua com a data real da morte)
+        var dataMorte = "2018-03-18T09:59:00";
+
+        // Atualiza a contagem a cada segundo
+        function atualizarContagem() {
+            var tempoDesdeMorte = calcularTempoDesdeMorte(dataMorte);
+            var resultado = "Tempo desde a morte: " + tempoDesdeMorte.anos + " anos, " + tempoDesdeMorte.dias + " dias, " + tempoDesdeMorte.horas + " horas, " + tempoDesdeMorte.minutos + " minutos e " + tempoDesdeMorte.segundos + " segundos";
+            document.getElementById("result").innerText = resultado;
+        }
+
+        // Atualiza a contagem a cada segundo
+        setInterval(atualizarContagem, 1000);
+
+        // Chama a função inicialmente para exibir o resultado assim que a página carregar
+        atualizarContagem();
+    </script>
+</div>
+  
+  </body>
+  </html>

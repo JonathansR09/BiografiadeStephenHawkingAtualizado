@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Biografia</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="index.html">Biografia</a>
+  <a href="importacia1.html">Importancia</a>
+  <a href="DoençaeMorte1.html">Doença e morte</a>
+</div>
+
+<div class="content">
+  <h2>Bibliografia</h2>
+  <p>Em 8 de janeiro de 1942 nascia em Oxford, na Inglaterra, o filho de uma secretária e um pesquisador. O casal não suspeitava na época que essa criança mudaria para sempre os rumos da humanidade.
+    Stephen Hawking foi o físico teórico inglês que desenvolveu a teoria da explosão de buracos negros e da singularidade do espaço-tempo, aproveitando seus estudos da teoria da relatividade e mecânica quântica.
+    Ficou curioso para conhecer um pouco mais sobre essa personalidade? Então, acompanhe a leitura!
+    Stephen Hawking nasceu em 8 de janeiro de 1942 em Oxford, Inglaterra, em meio a segunda guerra mundial.
+            Filho de Frank e Isobel Hawking, era o mais velho dos quatro filhos do casal.
+    No início da sua vida acadêmica era considerado um bom aluno, mas nada de excepcional.
+    Seu pai, que era médico, queria que seu filho mais velho estudasse medicina. No entanto, Hawking desde cedo apresentava aptidão para as ciências.
+    Aos 17 anos foi admitido na Universidade de Oxford,para estudar Ciências Naturais com ênfase em Física, se formando em 1962.
+    No mesmo ano foi fazer doutorado em Cosmologia na Universidade de Cambridge. Lá conheceu Jane Wilde, com quem se casou 2 anos mais tarde.
+    Em 1963, foi diagnosticado com esclerose lateral amiotrófica (ELA).
+    Ao terminar o doutorado, passou a ser pesquisador e mais tarde se tornou professor em Cambridge. Iniciou seus estudos em singularidades e buracos negros . Deixou o Instituto de Astronomia, em 1973.
+    Em 1979 entrou para o Departamento de Matemática Aplicada e Física Teórica. Ocupou a cátedra de professor Lucasiano em Matemática, também ocupada por Isaac Newton. Permanecendo até 2009.
+    O artigo “Black Hole Explosion" (explosão do buraco negro) é publicado em 1974. Onde apresenta a teoria que o proporcionou notoriedade.
+    Publica a teoria da ausência de fronteiras, em 1982, que descreve como o universo pode ter surgido do nada.
+    Em 1985 tem uma pneumonia e quase morre. Passa por uma traqueostomia, que o impede de falar de forma natural.
+    O livro “Uma breve história do tempo” é publicado em 1988 e tem recorde de vendas. O que torna Hawking um dos cientistas mais conhecidos do grande público.</p>
+</div>
+<div class="img">
+    <img src="img/quadro.png" alt="Stefen">
+    <td>
+        <img src="img/nasa.png" alt="">
+    </td>
+</div>
+
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Adiciona um zero à esquerda se o número for menor que 10
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("clock").innerText = timeString;
+        }
+
+        // Atualiza o relógio a cada segundo
+        setInterval(updateClock, 1000);
+
+        // Chama a função inicialmente para exibir o relógio assim que a página carregar
+        updateClock();
+    </script>
+
+<div class="Rodapé">
+  <p></p>
+</div>
+
+</body>
+</html>
